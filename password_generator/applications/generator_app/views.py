@@ -22,7 +22,7 @@ def password(request):
         characters.extend(list('0123456789'))
 
     for i in range(lenght):
-        # Se añade letras aleatorias de characters a la variable generated_password
+        # Se añade letras, numeros o caracteres aleatorios de la lista 'characters' a la variable generated_password
         generated_password += random.choice(characters)
 
     return render(request, 'generator_app/password.html', {'password': generated_password})
